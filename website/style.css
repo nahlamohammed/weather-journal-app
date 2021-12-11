@@ -1,111 +1,74 @@
-body{
-    background: #fffff8;
-    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+html { 
+  background: url("weather.jpg") no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
-#app{
-    display: grid;
-    grid-auto-rows: minmax(150px, auto);
-    /* grid-template-columns:  */
-    height:100vh;
-    background: #f23557;
-    color: #f0d43a;
-    justify-content: center;
-    grid-gap: 1em;
-    font-size: 20px;
-    font-family: 'Oswald', sans-serif;
+.title {
+  text-align: center;
 }
 
-.holder{
-
+#description {
+  text-align: center;
 }
 
-.entry{
-    background: rgba(59, 74, 107, .4);
+.container {
+  width: 100%;
+  margin: 1.5rem auto 0 auto;
 }
 
-#entryHolder{
-
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
 }
 
-#date{
-
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
 }
 
-#temp{
-
+#survey-form {
+  background: hsl(186deg 64% 23% / 70%);
+  padding: 2.3rem 0.5rem;
+  border-radius: 0.3rem;
 }
 
-#content{
-
+.form-input {
+  margin: 0 2.5rem 1.2rem 2rem;
 }
 
-.headline {
-
-}
-.title{
-
-}
-
-/*  Basic Styling To Override Default For Basic HTML Elements */
-label{
-    display:block;
-    font-size: 27px;
+.form-input-size {
+  display: block;
+  width: 100%;
+  height: 1.5rem;
+  padding: 0.3rem 0.4rem;
+  border-radius: 0.2rem;
+  outline: 0;
+  border-style: none;
+  margin-top: 0.4rem;
 }
 
-input{
-    display:block;
-    height: 60px;
-    width: 320px;
-    background:#22b2da;
-    color: #f0d43a;
-    font-size: 20px;
-    font-family: 'Oswald', sans-serif;
-    border: none;
+textarea {
+  width: 100%;
+  min-height: 6rem;
+  resize: vertical;
+  padding: 0.5rem 0 0 0.5rem;
 }
 
-button{
-    width: 400px;
-    height: 100px;
-    background: #3b4a6b;
-    color: #f0d43a;
-    font-size: 26px;
-    font-family: 'Oswald', sans-serif;
-    border: none;
-    box-shadow: 2px 4px 5px #444;
-}
-h1{
-    font-size: 36px;
+#generate {
+  width: 100%;
+  padding: 0.8rem;
+  background: orange;
+  color: white;
+  border-radius: 0.2rem;
+  cursor: pointer;
+  border: none;
 }
 
-textarea{
-    background:#22b2da;
-    color: #f0d43a;
-    font-size: 20px;
-    font-family: 'Oswald', sans-serif;
+.prop{
+  font-weight: bold;
 }
-/* Reset style for HTML element on active to have no border*/
-input:focus,
-select:focus,
-textarea:focus,
-button:focus {
-    outline: none;
-}
-/* Style for Placeholder Text*/
-::placeholder { /* Firefox, Chrome, Opera */ 
-    color: #f0d43a; 
-    font-family: 'Oswald', sans-serif;
-
-} 
-  
-:-ms-input-placeholder { /* Internet Explorer 10-11 */ 
-    color: #f0d43a; 
-    font-family: 'Oswald', sans-serif;
-
-} 
-  
-::-ms-input-placeholder { /* Microsoft Edge */ 
-    color: #f0d43a; 
-    font-family: 'Oswald', sans-serif;
-
-} 
