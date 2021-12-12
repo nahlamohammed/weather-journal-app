@@ -44,10 +44,9 @@ const getWeatherInfo = async (URL) => {
 /* Function to UPDATE UI */
 const updateUI = () => {
     getWeatherInfo('/weatherInfo').then(function (data) {
-        let mostRecentTemp = data.length-1;
-        document.getElementById('temp').innerHTML = `${data[mostRecentTemp].temp} °C`;
-        document.getElementById('date').innerHTML = data[mostRecentTemp].date;
-        document.getElementById('content').innerHTML = data[mostRecentTemp].feelings;
+        document.getElementById('temp').innerHTML = `${data.temp} °C`;
+        document.getElementById('date').innerHTML = data.date;
+        document.getElementById('content').innerHTML = data.feelings;
 
         document.getElementById('zip').value = '';
         document.getElementById('feelings').value = '';

@@ -13,19 +13,18 @@ app.use(cors());
 /* Initializing the main project folder */
 app.use(express.static('website'));
 
-const weatherData = [];
+projectData={};
 app.post('/weatherInfo', weatherInfo);
 
 function weatherInfo(req, res) {
     console.log('post weatherInfo route');
-    console.log(req.body);
-    weatherData.push(req.body);
-    res.send(weatherData);
+    projectData=req.body
+    res.send(projectData);
 }
 
 app.get('/weatherInfo', (req, res) => {
     console.log('get weatherInfo route');
-    res.send(weatherData);
+    res.send(projectData);
 });
 
 const port = 3000;
